@@ -20,7 +20,7 @@ program
 CSV TO XMLs
 */
 
-program.command('csvtoxmls [input]')
+program.command('csvtoxml [input]')
 .description('Generate XML files from CSV')
 .option('-i, --input <csv>', '')
 .action(function(input) {
@@ -90,7 +90,7 @@ program.command('csvtoxmls [input]')
 XMLs TO CSV
 */
 
-program.command('xmlstocsv [output]')
+program.command('xmltocsv [output]')
 .description('Generate CSV file from XML language files')
 .option('-o, --output <csv>', '')
 .action(function(output) {

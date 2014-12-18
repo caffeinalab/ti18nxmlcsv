@@ -15,7 +15,7 @@ Titanium Alloy XML file languages converter to and from CSV.
 ## Convert XML files to a CSV
 
 ```
-ti18nxmlcsv xmlstocsv my_file.csv
+ti18nxmlcsv xmltocsv my_file.csv
 ```
 
 The output file will be in `i18n/my_file.csv`
@@ -23,7 +23,7 @@ The output file will be in `i18n/my_file.csv`
 ## Convert CSV file to XML files
 
 ```
-ti18nxmlcsv csvtoxmls edited_csv_file.csv
+ti18nxmlcsv csvtoxml edited_csv_file.csv
 ```
 
 The *strings.xml* files will be overwritten, so **be careful**.
