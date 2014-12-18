@@ -1,6 +1,8 @@
-# Ti18nXmlCsv
+# Ti18nXMLCSV
 
-Titanium Alloy XML file languages converter to/from CSV (For people that like... Excel)
+Titanium Alloy XML file languages converter to and from CSV.
+
+**For people that, I don't know why, likes Excel**.
 
 [![NPM](https://nodei.co/npm/ti18nxmlcsv.png)](https://npmjs.org/package/ti18nxmlcsv)
 
@@ -26,6 +28,9 @@ ti18nxmlcsv csvtoxmls edited_csv_file.csv
 
 The *strings.xml* files will be overwritten, so **be careful**.
 
+## Have Fun
+
+<img src="http://media.giphy.com/media/V5MIVumLSDrnW/giphy.gif" />
 
 ## Contributing
 
@@ -44,7 +49,3 @@ Solve a problem. Features are great, but even better is cleaning-up and fixing i
 Copyright 2014 [Caffeina](http://caffeina.co) srl under the [MIT license](LICENSE.md).
 
 <p align="center"><a href="http://caffeina.co" target="_blank" title="Caffeina - Ideas Never Sleep"><img src="https://github.com/CaffeinaLab/BrandResources/blob/master/caffeina-handmade.png?raw=true" align="center" height="65"></a></p>
-
-## Have Fun
-
-<img src="http://media.giphy.com/media/V5MIVumLSDrnW/giphy.gif" />

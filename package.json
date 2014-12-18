@@ -12,7 +12,7 @@
     "email": "flavio.destefano@caffeinalab.com"
   },
   "bin": {
-    "ticons": "./cli.js"
+    "ti18nxmlcsv": "./cli.js"
   },
   "dependencies": {
     "colors": "^1.0.3",
