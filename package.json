@@ -1,0 +1,29 @@
+{
+  "name": "Ti18nXmlCsv",
+  "version": "0.0.1",
+  "description": "Titanium Alloy XML file languages converter to/from CSV (For people that like... Excel)",
+  "homepage": "https://github.com/CaffeinaLab/ti18nxmlcsv",
+  "bugs": {
+    "url": "ttps://github.com/CaffeinaLab/ti18nxmlcsv/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Flavio De Stefano",
+    "email": "flavio.destefano@caffeinalab.com"
+  },
+  "bin": {
+    "ticons": "./cli.js"
+  },
+  "dependencies": {
+    "colors": "^1.0.3",
+    "commander": "^2.5.1",
+    "csv": "^0.4.1",
+    "underscore": "^1.7.0",
+    "xml-writer": "^1.6.0",
+    "xml2js": "^0.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CaffeinaLab/ti18nxmlcsv"
+  }
+}
