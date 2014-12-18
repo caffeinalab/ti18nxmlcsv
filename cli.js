@@ -13,7 +13,7 @@ var xml2js = require('xml2js');
 program
 .version(package.version, '-v, --version')
 .description(package.description)
-.usage('command <args> [options]');
+.usage('command <args>');
 
 
 /*
@@ -38,6 +38,11 @@ program.command('csvtoxmls [input]')
 	csv.parse( fs.readFileSync(input, { encoding: 'utf8' }) , function(err, data) {
 		if (err) {
 			logger.error('Failed to parse CSV');
+			process.exit();
+		}
+
+		if (data.length === 0) {
+			logger.warn('CSV is empty');
 			process.exit();
 		}
 
@@ -100,7 +105,18 @@ program.command('xmlstocsv [output]')
 		process.exit(-1);
 	}
 
-	var languages = fs.readdirSync('i18n');
+	var languages = [];
+	_.each(fs.readdirSync('i18n'), function(i18nfile) {
+		if (fs.existsSync( path.join('i18n', i18nfile, 'strings.xml') )) {
+			languages.push(i18nfile);
+		}
+	});
+
+	if (languages.length === 0) {
+		logger.warn('No language present');
+		process.exit()
+	}
+
 	var objStrings = {};
 	_.each(languages, function(lang) {
 
@@ -138,7 +154,7 @@ program.command('xmlstocsv [output]')
 			process.exit();
 		}
 
-		fs.writeFileSync(output, data);
+		fs.writeFileSync( path.join('i18n', output) , data);
 	});
 
 });
