@@ -1,14 +1,14 @@
 # Ti18nXMLCSV
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CaffeinaLab/Ti18nXmlCsv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 Titanium Alloy XML file languages converter to and from CSV.
 
 **For people that, I don't know why, likes Excel**.
 
-[![NPM](https://nodei.co/npm/ti18nxmlcsv.png)](https://npmjs.org/package/ti18nxmlcsv)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CaffeinaLab/Ti18nXmlCsv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Installation
+
+[![NPM](https://nodei.co/npm/ti18nxmlcsv.png)](https://npmjs.org/package/ti18nxmlcsv)
 
 ```
 [sudo] npm install -g ti18nxmlcsv
