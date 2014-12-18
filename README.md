@@ -4,9 +4,11 @@ Titanium Alloy XML file languages converter to and from CSV.
 
 **For people that, I don't know why, likes Excel**.
 
-[![NPM](https://nodei.co/npm/ti18nxmlcsv.png)](https://npmjs.org/package/ti18nxmlcsv)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CaffeinaLab/Ti18nXmlCsv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Installation
+
+[![NPM](https://nodei.co/npm/ti18nxmlcsv.png)](https://npmjs.org/package/ti18nxmlcsv)
 
 ```
 [sudo] npm install -g ti18nxmlcsv
@@ -47,5 +49,3 @@ Solve a problem. Features are great, but even better is cleaning-up and fixing i
 ## Copyright and license
 
 Copyright 2014 [Caffeina](http://caffeina.co) srl under the [MIT license](LICENSE.md).
-
-<p align="center"><a href="http://caffeina.co" target="_blank" title="Caffeina - Ideas Never Sleep"><img src="https://github.com/CaffeinaLab/BrandResources/blob/master/caffeina-handmade.png?raw=true" align="center" height="65"></a></p>
