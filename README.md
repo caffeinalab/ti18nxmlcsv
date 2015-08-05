@@ -40,7 +40,7 @@ How to get involved:
 
 1. [Star](https://github.com/CaffeinaLab/Ti18nXMLCSV/stargazers) the project!
 2. Answer questions that come through [GitHub issues](https://github.com/CaffeinaLab/Ti18nXMLCSV/issues?state=open)
-3. [Report a bug](https://github.com/CaffeinaLab/Trimethyl/issues/new) that you find
+3. [Report a bug](https://github.com/CaffeinaLab/Ti18nXMLCSV/issues/new) that you find
 
 Pull requests are **highly appreciated**.
 
