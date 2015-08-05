@@ -20,10 +20,12 @@ program
 CSV TO XMLs
 */
 
-program.command('csvtoxml [input]')
+program
+.command('csvtoxml [input]')
 .description('Generate XML files from CSV')
-.option('-i, --input <csv>', 'CSV file')
-.action(function(input) {
+.option('--delimiter [delimiter]', 'Delimiter')
+.option('--rowdelimiter [rowdelimiter]', 'Row delimiter')
+.action(function(input, options) {
 
 	if ( ! input) {
 		logger.error('Please set the input');
@@ -35,15 +37,24 @@ program.command('csvtoxml [input]')
 		process.exit();
 	}
 
+
 	var csvContent = fs.readFileSync(input, { encoding: 'utf8' });
-	csv.parse(csvContent, function(err, data) {
+	csv.parse(csvContent, {
+		delimiter: options.delimiter,
+		rowDelimiter: options.rowdelimiter
+	}, function(err, data) {
 		if (err) {
 			logger.error('Failed to parse CSV file');
 			process.exit();
 		}
 
-		if (data.length === 0) {
-			logger.warn('Failed to parse CSV content');
+		if (data.length < 2) {
+			logger.warn('Failed to parse CSV content: not enough rows (<2)');
+			process.exit();
+		}
+
+		if (data[0].length < 2) {
+			logger.warn('Failed to parse CSV content: not enough languages (<2)');
 			process.exit();
 		}
 
@@ -90,6 +101,8 @@ program.command('csvtoxml [input]')
 			// Write i18n/lang/strings.xml
 			fs.writeFileSync(path.join('i18n', lang, 'strings.xml'), xw);
 
+			logger.info('XML in <' + lang + '> written');
+
 		});
 
 	});
@@ -103,7 +116,6 @@ XMLs TO CSV
 
 program.command('xmltocsv [output]')
 .description('Generate CSV file from XML language files')
-.option('-o, --output <csv>', 'CSV file')
 .action(function(output) {
 
 	if ( ! output) {
@@ -125,7 +137,7 @@ program.command('xmltocsv [output]')
 
 	if (languages.length === 0) {
 		logger.warn('No language available in i18n directory');
-		process.exit()
+		process.exit();
 	}
 
 	var objStrings = {};
