@@ -72,7 +72,7 @@ program
 				});
 			} else {
 				_.each(row, function(str, column) {
-					if (column > 0) {
+					if (column > 0 && !_.isEmpty(str)) {
 						objData[ languages[column-1] ][ row[0] ] = str;
 					}
 				});
